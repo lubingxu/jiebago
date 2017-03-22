@@ -6,9 +6,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/wangbin/jiebago/dictionary"
-	"github.com/wangbin/jiebago/finalseg"
-	"github.com/wangbin/jiebago/util"
+	"github.com/lubingxu/jiebago/dictionary"
+	"github.com/lubingxu/jiebago/finalseg"
+	"github.com/lubingxu/jiebago/util"
 )
 
 var (
@@ -27,6 +27,10 @@ type Segmenter struct {
 // Frequency returns a word's frequency and existence
 func (seg *Segmenter) Frequency(word string) (float64, bool) {
 	return seg.dict.Frequency(word)
+}
+
+func (seg *Segmenter) Attr(word string) (float64, string, bool) {
+	return seg.dict.Attr(word)
 }
 
 // AddWord adds a new word with frequency to dictionary
@@ -94,7 +98,8 @@ func (seg *Segmenter) SuggestFrequency(words ...string) float64 {
 // LoadDictionary loads dictionary from given file name. Everytime
 // LoadDictionary is called, previously loaded dictionary will be cleard.
 func (seg *Segmenter) LoadDictionary(fileName string) error {
-	seg.dict = &Dictionary{freqMap: make(map[string]float64)}
+	// seg.dict = &Dictionary{freqMap: make(map[string]float64)}
+	seg.dict = &Dictionary{tokenAttrMap: make(map[string]dictionary.TokenAttr)}
 	return seg.dict.loadDictionary(fileName)
 }
 
