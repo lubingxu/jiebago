@@ -1,8 +1,8 @@
 #结巴分词 Go 语言版：Jiebago
 
-[![Build Status](https://travis-ci.org/lubingxu/jiebago.png?branch=master)](https://travis-ci.org/lubingxu/jiebago) [![GoDoc](https://godoc.org/github.com/wangbin/jiebago?status.svg)](https://godoc.org/github.com/wangbin/jiebago)
+[![GoDoc](https://godoc.org/github.com/wangbin/jiebago?status.svg)](https://godoc.org/github.com/wangbin/jiebago)
 
-这是fork自[wangbin/jieba](https://github.com/fxsjy/jieba)，增加了获取词性属性的功能。所有的使用接口维持不变。
+这是fork自[wangbin/jieba](https://github.com/fxsjy/jieba)的中文分词程序，调整了分词属性的代码，增加了获取词性属性的功能。所有的使用接口维持不变。
 
 [结巴分词](https://github.com/fxsjy/jieba) 是由 [@fxsjy](https://github.com/fxsjy) 使用 Python 编写的中文分词组件，Iiebago 是结巴分词的 Golang 语言实现。
 
