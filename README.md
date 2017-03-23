@@ -9,7 +9,7 @@
 ## 安装
 
 ```
-go get github.com/lubingxu/jiebago/...
+go get github.com/rosbit/jiebago/...
 ```
 
 ## 使用
@@ -20,7 +20,7 @@ package main
 import (
         "fmt"
 
-        "github.com/lubingxu/jiebago"
+        "github.com/rosbit/jiebago"
 )
 
 var seg jiebago.Segmenter
